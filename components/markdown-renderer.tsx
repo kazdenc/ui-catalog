@@ -90,21 +90,36 @@ function parseInline(text: string): React.ReactNode {
   let key = 0
 
   while (remaining.length > 0) {
-    // Inline code
-    const codeMatch = remaining.match(/^(.*?)`([^`]+)`(.*)$/)
-    if (codeMatch) {
-      if (codeMatch[1]) parts.push(codeMatch[1])
-      parts.push(
-        <code key={key++} className="rounded bg-muted px-1.5 py-0.5 text-sm font-mono">
-          {codeMatch[2]}
-        </code>
-      )
-      remaining = codeMatch[3]
-      continue
+    // Find the earliest inline pattern (bold or code)
+    const codeIdx = remaining.indexOf("`")
+    const boldIdx = remaining.indexOf("**")
+
+    // No more patterns
+    if (codeIdx === -1 && boldIdx === -1) {
+      parts.push(remaining)
+      break
+    }
+
+    // Pick whichever comes first
+    const codeFirst = codeIdx !== -1 && (boldIdx === -1 || codeIdx < boldIdx)
+
+    if (codeFirst) {
+      const codeMatch = remaining.match(/^([\s\S]*?)`([^`]+)`([\s\S]*)$/)
+      if (codeMatch) {
+        if (codeMatch[1]) parts.push(...parseInline_bold(codeMatch[1], key))
+        key += countBold(codeMatch[1])
+        parts.push(
+          <code key={key++} className="rounded bg-muted px-1.5 py-0.5 text-sm font-mono">
+            {codeMatch[2]}
+          </code>
+        )
+        remaining = codeMatch[3]
+        continue
+      }
     }
 
     // Bold
-    const boldMatch = remaining.match(/^(.*?)\*\*([^*]+)\*\*(.*)$/)
+    const boldMatch = remaining.match(/^([\s\S]*?)\*\*([^*]+)\*\*([\s\S]*)$/)
     if (boldMatch) {
       if (boldMatch[1]) parts.push(boldMatch[1])
       parts.push(<strong key={key++}>{boldMatch[2]}</strong>)
@@ -117,6 +132,32 @@ function parseInline(text: string): React.ReactNode {
   }
 
   return parts.length === 1 ? parts[0] : parts
+}
+
+/** Parse only bold markers in a substring (used for text before inline code) */
+function parseInline_bold(text: string, startKey: number): React.ReactNode[] {
+  const parts: React.ReactNode[] = []
+  let remaining = text
+  let key = startKey
+
+  while (remaining.length > 0) {
+    const boldMatch = remaining.match(/^([\s\S]*?)\*\*([^*]+)\*\*([\s\S]*)$/)
+    if (boldMatch) {
+      if (boldMatch[1]) parts.push(boldMatch[1])
+      parts.push(<strong key={key++}>{boldMatch[2]}</strong>)
+      remaining = boldMatch[3]
+      continue
+    }
+    parts.push(remaining)
+    break
+  }
+
+  return parts
+}
+
+function countBold(text: string): number {
+  const matches = text.match(/\*\*[^*]+\*\*/g)
+  return matches ? matches.length : 0
 }
 
 export function MarkdownRenderer({ content }: { content: string }) {

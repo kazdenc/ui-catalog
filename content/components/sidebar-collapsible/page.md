@@ -33,5 +33,3 @@ Shared helpers are in `previews/shared.tsx` — copy that too, or inline what yo
 ## Notes
 
 All variants use the real shadcn v4 Sidebar with `SidebarProvider` and proper fixed positioning. The preview in this catalog renders them in iframes to contain the layout.
-
-Adapted from [blocks.so](https://blocks.so) sidebar blocks 01-06.
