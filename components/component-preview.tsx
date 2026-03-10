@@ -13,6 +13,15 @@ export function ComponentPreview({
 }) {
   const [expanded, setExpanded] = React.useState(false)
 
+  React.useEffect(() => {
+    if (expanded) {
+      document.body.style.overflow = "hidden"
+      return () => {
+        document.body.style.overflow = ""
+      }
+    }
+  }, [expanded])
+
   if (controls) {
     return (
       <>
@@ -41,11 +50,11 @@ export function ComponentPreview({
 
         {expanded && (
           <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+            className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black/50"
             onClick={() => setExpanded(false)}
           >
             <div
-              className="relative m-2 flex h-[calc(100svh-16px)] w-[calc(100svw-16px)] flex-col rounded-xl bg-background"
+              className="relative m-6 flex h-[calc(100svh-48px)] w-[calc(100svw-48px)] flex-col overflow-auto rounded-xl bg-background"
               onClick={(e) => e.stopPropagation()}
             >
               <button
@@ -92,11 +101,11 @@ export function ComponentPreview({
 
       {expanded && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+          className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black/50"
           onClick={() => setExpanded(false)}
         >
           <div
-            className="relative m-2 flex h-[calc(100svh-16px)] w-[calc(100svw-16px)] items-center justify-center rounded-xl bg-background"
+            className="relative m-6 flex h-[calc(100svh-48px)] w-[calc(100svw-48px)] items-center justify-center overflow-auto rounded-xl bg-background"
             onClick={(e) => e.stopPropagation()}
           >
             <button
