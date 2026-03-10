@@ -1,0 +1,9 @@
+{
+  "title": "Sidebar",
+  "description": "Dashboard sidebar blocks with 6 layout variants using real shadcn Sidebar primitives.",
+  "category": "Navigation",
+  "date": "2026-03-10",
+  "order": 20,
+  "registryDependencies": ["sidebar", "dropdown-menu", "tooltip"],
+  "controls": true
+}

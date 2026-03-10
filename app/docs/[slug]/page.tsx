@@ -33,6 +33,9 @@ const demoModules: Record<
   "loader": dynamic(
     () => import("@/content/components/loader/demo"),
   ),
+  "sidebar-collapsible": dynamic(
+    () => import("@/content/components/sidebar-collapsible/demo"),
+  ),
 }
 
 export function generateStaticParams() {
