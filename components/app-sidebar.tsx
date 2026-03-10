@@ -1,5 +1,6 @@
 import * as React from "react"
 
+import { Github } from "lucide-react"
 import { SearchForm } from "@/components/search-form"
 import {
   Sidebar,
@@ -8,6 +9,7 @@ import {
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarHeader,
+  SidebarFooter,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -51,6 +53,30 @@ export function AppSidebar({
           </SidebarGroup>
         ))}
       </SidebarContent>
+      <SidebarFooter>
+        <div className="flex items-center gap-3 px-2 py-1">
+          <a
+            href="https://github.com/kazdenc/ui-catalog"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+          >
+            <Github className="h-3 w-3" />
+            <span>Repo</span>
+          </a>
+          <span className="text-xs text-muted-foreground">
+            Made by{" "}
+            <a
+              href="https://github.com/kazdenc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-foreground hover:text-primary transition-colors"
+            >
+              @kazdenc
+            </a>
+          </span>
+        </div>
+      </SidebarFooter>
       <SidebarRail />
     </Sidebar>
   )

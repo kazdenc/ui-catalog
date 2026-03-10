@@ -1,0 +1,8 @@
+{
+  "title": "Glow Button",
+  "description": "A button with an animated glow effect on hover.",
+  "category": "Buttons",
+  "date": "2026-03-10",
+  "order": 10,
+  "registryDependencies": ["button"]
+}
