@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UI Catalog
 
-## Getting Started
+A daily UI concept registry built on [shadcn](https://ui.shadcn.com). Browse, preview, and install standalone React components.
 
-First, run the development server:
+## Quick Start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to browse the catalog.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Using Components
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Every component is installable via the shadcn CLI:
 
-## Learn More
+```bash
+npx shadcn add https://ui-catalog.dev/r/glow-button.json
+```
 
-To learn more about Next.js, take a look at the following resources:
+This copies the component source directly into your project — no package dependency, no iframes, no catalog overhead. Components only depend on standard shadcn primitives and Tailwind CSS.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How It Works
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Each component is a self-contained folder:
 
-## Deploy on Vercel
+```
+content/components/glow-button/
+  component.tsx   # The actual component (standalone, copy-pasteable)
+  demo.tsx        # Live demo for the docs site
+  meta.json       # Title, description, category, dependencies
+  page.md         # Usage documentation
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The catalog site is a Next.js app that discovers these folders automatically and renders documentation pages with live previews. But the components themselves have zero dependency on the site — `component.tsx` is the same file you'd use in any React project.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Current Components
+
+| Component | Category | Description |
+|-----------|----------|-------------|
+| Glow Button | Buttons | Animated glow effect on hover |
+| Glass Card | Cards | Frosted glass morphism card |
+| Loader | Feedback | Configurable loading spinner |
+| Sidebar Collapsible | Navigation | Collapsible sidebar with 6 layout variants |
+
+## Project Structure
+
+```
+content/components/   # Component source, demos, and docs
+app/docs/             # Documentation pages
+app/preview/          # Isolated preview routes (for iframe rendering)
+components/ui/        # shadcn primitives
+lib/                  # Utilities and content discovery
+```
+
+## Tech Stack
+
+- Next.js 16 with Turbopack
+- React 19
+- Tailwind CSS v4
+- shadcn v4 (base-nova style)
+- TypeScript
+- pnpm
+
+## Adding a Component
+
+1. Create a folder in `content/components/<your-component>/`
+2. Add the four required files: `component.tsx`, `demo.tsx`, `meta.json`, `page.md`
+3. Register the demo import in `app/docs/[slug]/page.tsx`
+4. The sidebar picks it up automatically
+
+See `content/components/glow-button/` for the simplest example.
+
+## Scripts
+
+```bash
+pnpm dev              # Dev server
+pnpm build            # Production build
+pnpm lint             # Lint
+pnpm registry:build   # Build registry JSON files for external installation
+```
