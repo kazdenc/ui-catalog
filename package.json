@@ -1,12 +1,13 @@
 {
-  "name": "ui-catalog-scaffold",
+  "name": "ui-catalog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "registry:build": "shadcn build"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
