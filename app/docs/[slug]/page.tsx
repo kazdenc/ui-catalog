@@ -36,6 +36,9 @@ const demoModules: Record<
   "sidebar-collapsible": dynamic(
     () => import("@/content/components/sidebar-collapsible/demo"),
   ),
+  "spotlight-card": dynamic(
+    () => import("@/content/components/spotlight-card/demo"),
+  ),
 }
 
 export function generateStaticParams() {

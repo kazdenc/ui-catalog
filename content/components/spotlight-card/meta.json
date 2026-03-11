@@ -1,0 +1,8 @@
+{
+  "title": "Spotlight Card",
+  "description": "Radial gradient spotlight follows cursor over a dark card surface.",
+  "category": "Cards",
+  "date": "2026-03-10",
+  "order": 12,
+  "registryDependencies": []
+}
