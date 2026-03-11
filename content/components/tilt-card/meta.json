@@ -1,0 +1,8 @@
+{
+  "title": "Tilt Card",
+  "description": "3D perspective tilt on hover with light reflection and parallax depth layers.",
+  "category": "Cards",
+  "date": "2026-03-10",
+  "order": 13,
+  "registryDependencies": []
+}

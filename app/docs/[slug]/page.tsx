@@ -39,6 +39,9 @@ const demoModules: Record<
   "spotlight-card": dynamic(
     () => import("@/content/components/spotlight-card/demo"),
   ),
+  "tilt-card": dynamic(
+    () => import("@/content/components/tilt-card/demo"),
+  ),
 }
 
 export function generateStaticParams() {
