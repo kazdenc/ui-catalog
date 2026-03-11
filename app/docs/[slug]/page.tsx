@@ -51,6 +51,9 @@ const demoModules: Record<
   "expandable-card": dynamic(
     () => import("@/content/components/expandable-card/demo"),
   ),
+  "pricing-card": dynamic(
+    () => import("@/content/components/pricing-card/demo"),
+  ),
 }
 
 export function generateStaticParams() {

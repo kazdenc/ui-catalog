@@ -1,0 +1,8 @@
+{
+  "title": "Pricing Card",
+  "description": "Pricing tier card with popular badge, feature list, and CTA.",
+  "category": "Cards",
+  "date": "2026-03-11",
+  "order": 17,
+  "registryDependencies": ["button"]
+}
