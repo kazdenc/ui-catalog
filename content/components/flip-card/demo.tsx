@@ -3,16 +3,16 @@
 import { FlipCard, FlipCardFront, FlipCardBack } from "./component"
 
 const face =
-  "flex h-full w-full flex-col items-center justify-center rounded-xl border border-white/10 p-6"
+  "flex h-full w-full flex-col items-center justify-center rounded-xl border p-6"
 
 export default function FlipCardDemo() {
   return (
     <div className="flex flex-wrap justify-center gap-6">
       <FlipCard className="h-56 w-44">
-        <FlipCardFront className={`${face} bg-neutral-900`}>
+        <FlipCardFront className={`${face} bg-card`}>
           <span className="text-3xl">🂡</span>
-          <p className="mt-3 text-sm font-medium text-white">Hover me</p>
-          <p className="mt-1 text-xs text-neutral-500">Horizontal flip</p>
+          <p className="mt-3 text-sm font-medium text-card-foreground">Hover me</p>
+          <p className="mt-1 text-xs text-muted-foreground">Horizontal flip</p>
         </FlipCardFront>
         <FlipCardBack className={`${face} bg-indigo-950`}>
           <span className="text-3xl">✦</span>
@@ -24,10 +24,10 @@ export default function FlipCardDemo() {
       </FlipCard>
 
       <FlipCard trigger="click" className="h-56 w-44">
-        <FlipCardFront className={`${face} bg-neutral-900`}>
+        <FlipCardFront className={`${face} bg-card`}>
           <span className="text-3xl">?</span>
-          <p className="mt-3 text-sm font-medium text-white">Click me</p>
-          <p className="mt-1 text-xs text-neutral-500">Click to reveal</p>
+          <p className="mt-3 text-sm font-medium text-card-foreground">Click me</p>
+          <p className="mt-1 text-xs text-muted-foreground">Click to reveal</p>
         </FlipCardFront>
         <FlipCardBack className={`${face} bg-emerald-950`}>
           <span className="text-3xl">✓</span>
@@ -39,10 +39,10 @@ export default function FlipCardDemo() {
       </FlipCard>
 
       <FlipCard direction="vertical" className="h-56 w-44">
-        <FlipCardFront className={`${face} bg-neutral-900`}>
+        <FlipCardFront className={`${face} bg-card`}>
           <span className="text-3xl">↕</span>
-          <p className="mt-3 text-sm font-medium text-white">Vertical</p>
-          <p className="mt-1 text-xs text-neutral-500">Flips on X axis</p>
+          <p className="mt-3 text-sm font-medium text-card-foreground">Vertical</p>
+          <p className="mt-1 text-xs text-muted-foreground">Flips on X axis</p>
         </FlipCardFront>
         <FlipCardBack className={`${face} bg-rose-950`}>
           <span className="text-3xl">★</span>

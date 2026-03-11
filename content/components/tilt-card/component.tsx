@@ -82,7 +82,7 @@ const TiltCard = React.forwardRef<HTMLDivElement, TiltCardProps>(
         {...props}
       >
         <TiltContext.Provider value={{ nx: tilt.nx, ny: tilt.ny, isHovered }}>
-          <div className="relative overflow-hidden rounded-xl border border-white/10 bg-neutral-900 p-6">
+          <div className="relative overflow-hidden rounded-xl border bg-card p-6">
             {children}
             {glare && (
               <div

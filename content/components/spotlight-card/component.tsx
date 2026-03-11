@@ -38,7 +38,7 @@ const SpotlightCard = React.forwardRef<HTMLDivElement, SpotlightCardProps>(
       <div
         ref={internalRef}
         className={cn(
-          "group relative overflow-hidden rounded-xl bg-neutral-950 p-px",
+          "group relative overflow-hidden rounded-xl bg-background p-px",
           className,
         )}
         onMouseMove={handleMouseMove}
@@ -58,7 +58,7 @@ const SpotlightCard = React.forwardRef<HTMLDivElement, SpotlightCardProps>(
         />
 
         {/* Inner card surface */}
-        <div className="relative rounded-[11px] bg-neutral-900 p-6">
+        <div className="relative rounded-[11px] bg-card p-6">
           {/* Main spotlight beam — bright concentrated core with falloff */}
           <div
             className={cn(

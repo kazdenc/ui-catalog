@@ -25,7 +25,7 @@ const ExpandableCard = React.forwardRef<HTMLDivElement, ExpandableCardProps>(
       <div
         ref={ref}
         className={cn(
-          "group relative cursor-pointer overflow-hidden rounded-xl border border-white/10 bg-neutral-900 transition-colors hover:border-white/20",
+          "group relative cursor-pointer overflow-hidden rounded-xl border bg-card transition-colors hover:border-foreground/20",
           className,
         )}
         onClick={onToggle}

@@ -42,7 +42,7 @@ const BentoGridItem = React.forwardRef<HTMLDivElement, BentoGridItemProps>(
     <div
       ref={ref}
       className={cn(
-        "group relative overflow-hidden rounded-xl border border-white/10 bg-neutral-900 p-6 transition-colors hover:border-white/20",
+        "group relative overflow-hidden rounded-xl border bg-card p-6 transition-colors hover:border-foreground/20",
         spanClasses[colSpan],
         rowSpanClasses[rowSpan],
         className,

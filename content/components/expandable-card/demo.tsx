@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { Plus } from "lucide-react"
 import {
   ExpandableCard,
   ExpandableCardHeader,
@@ -42,26 +43,24 @@ export default function ExpandableCardDemo() {
           <ExpandableCardHeader>
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-sm font-semibold text-white">
+                <h3 className="text-sm font-semibold text-card-foreground">
                   {item.title}
                 </h3>
-                <p className="mt-1 text-xs text-neutral-400">
+                <p className="mt-1 text-xs text-muted-foreground">
                   {item.description}
                 </p>
               </div>
-              <div
-                className="text-neutral-500 transition-transform duration-300"
+              <Plus
+                className="h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-300"
                 style={{
                   transform:
                     openIndex === i ? "rotate(45deg)" : "rotate(0deg)",
                 }}
-              >
-                +
-              </div>
+              />
             </div>
           </ExpandableCardHeader>
           <ExpandableCardContent expanded={openIndex === i}>
-            <p className="text-sm leading-relaxed text-neutral-300">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               {item.detail}
             </p>
           </ExpandableCardContent>
