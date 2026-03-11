@@ -54,6 +54,9 @@ const demoModules: Record<
   "pricing-card": dynamic(
     () => import("@/content/components/pricing-card/demo"),
   ),
+  "progress-bar": dynamic(
+    () => import("@/content/components/progress-bar/demo"),
+  ),
 }
 
 export function generateStaticParams() {

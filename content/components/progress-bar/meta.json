@@ -1,0 +1,9 @@
+{
+  "title": "Progress Bar",
+  "description": "Animated progress bars with multiple variants.",
+  "category": "Feedback",
+  "date": "2026-03-11",
+  "order": 21,
+  "registryDependencies": [],
+  "controls": true
+}
