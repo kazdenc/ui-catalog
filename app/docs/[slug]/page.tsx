@@ -57,6 +57,18 @@ const demoModules: Record<
   "progress-bar": dynamic(
     () => import("@/content/components/progress-bar/demo"),
   ),
+  "alert-banner": dynamic(
+    () => import("@/content/components/alert-banner/demo"),
+  ),
+  "empty-state": dynamic(
+    () => import("@/content/components/empty-state/demo"),
+  ),
+  "skeleton-loader": dynamic(
+    () => import("@/content/components/skeleton-loader/demo"),
+  ),
+  "step-indicator": dynamic(
+    () => import("@/content/components/step-indicator/demo"),
+  ),
 }
 
 export function generateStaticParams() {

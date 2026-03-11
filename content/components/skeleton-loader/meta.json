@@ -1,0 +1,9 @@
+{
+  "title": "Skeleton Loader",
+  "description": "Content placeholder skeletons with shimmer animation.",
+  "category": "Feedback",
+  "date": "2026-03-11",
+  "order": 22,
+  "registryDependencies": ["skeleton"],
+  "controls": false
+}

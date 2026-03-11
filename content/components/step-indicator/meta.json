@@ -1,0 +1,9 @@
+{
+  "title": "Step Indicator",
+  "description": "Horizontal/vertical step progress indicator.",
+  "category": "Feedback",
+  "date": "2026-03-11",
+  "order": 25,
+  "registryDependencies": [],
+  "controls": true
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Alert Banner",
+  "description": "Dismissible alert banners with icon and action slot.",
+  "category": "Feedback",
+  "date": "2026-03-11",
+  "order": 23,
+  "registryDependencies": ["button"],
+  "controls": false
+}
