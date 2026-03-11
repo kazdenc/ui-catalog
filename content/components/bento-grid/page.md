@@ -11,7 +11,7 @@ import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid"
 
 export default function Example() {
   return (
-    <BentoGrid columns={3}>
+    <BentoGrid>
       <BentoGridItem colSpan={2} rowSpan={2}>
         Hero cell
       </BentoGridItem>
@@ -26,15 +26,16 @@ export default function Example() {
 
 ### BentoGrid
 
-- **columns** — `number`. Number of grid columns. Default: `4`
+- Default breakpoints: 1 column on mobile, 2 on `sm`, 4 on `lg`.
+- Override with Tailwind grid classes on `className` (e.g. `sm:grid-cols-3 lg:grid-cols-6`).
 - Extends all native `<div>` HTML attributes.
 
 ### BentoGridItem
 
-- **colSpan** — `number`. Number of columns to span. Default: `1`
-- **rowSpan** — `number`. Number of rows to span. Default: `1`
+- **colSpan** — `1 | 2 | 3 | 4`. Columns to span. Automatically clamps on smaller breakpoints so items never overflow the grid. Default: `1`
+- **rowSpan** — `1 | 2 | 3`. Rows to span. Default: `1`
 - Extends all native `<div>` HTML attributes.
 
 ## Notes
 
-Rows auto-size with `minmax(8rem, 1fr)`. For responsive layouts, override `columns` at different breakpoints or use Tailwind's responsive grid classes on the BentoGrid className.
+Responsive behavior is built in. A `colSpan={3}` item shows as full-width on mobile (1 col), spans 2 on `sm` (2 col grid), and spans 3 on `lg` (4 col grid). No manual responsive classes needed on individual items.

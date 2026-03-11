@@ -1,10 +1,10 @@
-"use client"
-
 import { BentoGrid, BentoGridItem } from "./component"
+
+const bars = [40, 65, 30, 80, 55, 45, 70, 60, 35, 75]
 
 export default function BentoGridDemo() {
   return (
-    <BentoGrid columns={4}>
+    <BentoGrid>
       <BentoGridItem colSpan={2} rowSpan={2}>
         <div className="flex h-full flex-col justify-between">
           <div>
@@ -15,53 +15,62 @@ export default function BentoGridDemo() {
               Large hero cell
             </h3>
             <p className="mt-2 text-sm text-neutral-400">
-              Spans 2 columns and 2 rows for maximum visual impact.
+              Spans 2 columns and 2 rows for maximum visual impact. Use for
+              primary content or a key visual.
             </p>
           </div>
-          <div className="mt-4 h-20 rounded-lg bg-gradient-to-br from-indigo-500/20 to-purple-500/20" />
+          <div className="mt-4 h-24 rounded-lg bg-gradient-to-br from-indigo-500/20 via-purple-500/10 to-transparent" />
         </div>
       </BentoGridItem>
 
       <BentoGridItem colSpan={2}>
-        <div className="mb-2 h-6 w-6 rounded bg-amber-500/20" />
-        <h3 className="text-sm font-semibold text-white">Performance</h3>
-        <p className="mt-1 text-xs text-neutral-400">
-          CSS Grid with no JavaScript layout computation.
-        </p>
-      </BentoGridItem>
-
-      <BentoGridItem>
-        <div className="mb-2 h-6 w-6 rounded bg-rose-500/20" />
-        <h3 className="text-sm font-semibold text-white">Flexible</h3>
-        <p className="mt-1 text-xs text-neutral-400">Any span combo.</p>
-      </BentoGridItem>
-
-      <BentoGridItem>
-        <div className="mb-2 h-6 w-6 rounded bg-sky-500/20" />
-        <h3 className="text-sm font-semibold text-white">Responsive</h3>
-        <p className="mt-1 text-xs text-neutral-400">Override columns at breakpoints.</p>
-      </BentoGridItem>
-
-      <BentoGridItem colSpan={2}>
-        <h3 className="text-sm font-semibold text-white">Wide cell</h3>
-        <p className="mt-1 text-xs text-neutral-400">
-          Spans 2 columns for horizontal content like charts or stats.
-        </p>
-        <div className="mt-3 flex gap-2">
-          {[40, 65, 30, 80, 55, 45, 70].map((h, i) => (
+        <h3 className="text-sm font-semibold text-white">Activity</h3>
+        <p className="mt-1 text-xs text-neutral-500">Last 10 days</p>
+        <div className="mt-3 flex items-end gap-1.5" style={{ height: 48 }}>
+          {bars.map((h, i) => (
             <div
               key={i}
-              className="flex-1 rounded-sm bg-emerald-500/20"
-              style={{ height: `${h}%`, minHeight: `${h * 0.6}px` }}
+              className="flex-1 rounded-sm bg-emerald-500/30 transition-colors group-hover:bg-emerald-500/50"
+              style={{ height: `${h}%` }}
             />
           ))}
         </div>
       </BentoGridItem>
 
-      <BentoGridItem colSpan={2}>
-        <h3 className="text-sm font-semibold text-white">Another wide cell</h3>
+      <BentoGridItem>
+        <div className="mb-3 h-8 w-8 rounded-lg bg-gradient-to-br from-amber-500/30 to-orange-500/10" />
+        <h3 className="text-sm font-semibold text-white">Flexible</h3>
+        <p className="mt-1 text-xs text-neutral-400">Any span combination.</p>
+      </BentoGridItem>
+
+      <BentoGridItem>
+        <div className="mb-3 h-8 w-8 rounded-lg bg-gradient-to-br from-sky-500/30 to-cyan-500/10" />
+        <h3 className="text-sm font-semibold text-white">Responsive</h3>
         <p className="mt-1 text-xs text-neutral-400">
-          Mix and match spans to create unique layouts.
+          Collapses gracefully on smaller screens.
+        </p>
+      </BentoGridItem>
+
+      <BentoGridItem colSpan={2}>
+        <div className="flex items-center gap-4">
+          <div className="h-12 w-12 shrink-0 rounded-full bg-gradient-to-br from-rose-500/30 to-pink-500/10" />
+          <div>
+            <h3 className="text-sm font-semibold text-white">
+              Composable cells
+            </h3>
+            <p className="mt-1 text-xs text-neutral-400">
+              Each cell is a plain div. Put anything inside: text, charts,
+              images, or other components.
+            </p>
+          </div>
+        </div>
+      </BentoGridItem>
+
+      <BentoGridItem colSpan={2}>
+        <h3 className="text-sm font-semibold text-white">Pure CSS layout</h3>
+        <p className="mt-1 text-xs text-neutral-400">
+          No JavaScript layout computation. Built on CSS Grid with Tailwind
+          responsive breakpoints and auto-sizing rows.
         </p>
       </BentoGridItem>
     </BentoGrid>
