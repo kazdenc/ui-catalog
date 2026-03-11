@@ -3,7 +3,7 @@
 import { FlipCard, FlipCardFront, FlipCardBack } from "./component"
 
 const face =
-  "flex h-full w-full flex-col items-center justify-center rounded-xl border p-6"
+  "flex h-full w-full flex-col items-center justify-center rounded-xl border p-6 text-center"
 
 export default function FlipCardDemo() {
   return (
