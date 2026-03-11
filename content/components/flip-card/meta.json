@@ -1,0 +1,8 @@
+{
+  "title": "Flip Card",
+  "description": "Front/back card with 3D flip on hover or click.",
+  "category": "Cards",
+  "date": "2026-03-10",
+  "order": 14,
+  "registryDependencies": []
+}

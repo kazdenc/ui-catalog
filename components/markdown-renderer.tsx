@@ -32,6 +32,15 @@ function parseMarkdown(md: string): React.ReactNode[] {
     }
 
     // Headings
+    if (line.startsWith("### ")) {
+      nodes.push(
+        <h3 key={nodes.length} className="mt-8 mb-3 text-lg font-semibold tracking-tight">
+          {line.slice(4)}
+        </h3>
+      )
+      i++
+      continue
+    }
     if (line.startsWith("## ")) {
       nodes.push(
         <h2 key={nodes.length} className="mt-10 mb-4 text-2xl font-semibold tracking-tight">

@@ -42,6 +42,9 @@ const demoModules: Record<
   "tilt-card": dynamic(
     () => import("@/content/components/tilt-card/demo"),
   ),
+  "flip-card": dynamic(
+    () => import("@/content/components/flip-card/demo"),
+  ),
 }
 
 export function generateStaticParams() {
