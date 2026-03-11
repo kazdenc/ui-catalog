@@ -23,7 +23,7 @@ export default function BentoGridDemo() {
       </BentoGridItem>
 
       <BentoGridItem colSpan={2}>
-        <div className="mb-2 text-2xl">⚡</div>
+        <div className="mb-2 h-6 w-6 rounded bg-amber-500/20" />
         <h3 className="text-sm font-semibold text-white">Performance</h3>
         <p className="mt-1 text-xs text-neutral-400">
           CSS Grid with no JavaScript layout computation.
@@ -31,13 +31,13 @@ export default function BentoGridDemo() {
       </BentoGridItem>
 
       <BentoGridItem>
-        <div className="mb-2 text-2xl">🎨</div>
+        <div className="mb-2 h-6 w-6 rounded bg-rose-500/20" />
         <h3 className="text-sm font-semibold text-white">Flexible</h3>
         <p className="mt-1 text-xs text-neutral-400">Any span combo.</p>
       </BentoGridItem>
 
       <BentoGridItem>
-        <div className="mb-2 text-2xl">📐</div>
+        <div className="mb-2 h-6 w-6 rounded bg-sky-500/20" />
         <h3 className="text-sm font-semibold text-white">Responsive</h3>
         <p className="mt-1 text-xs text-neutral-400">Override columns at breakpoints.</p>
       </BentoGridItem>

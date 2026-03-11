@@ -48,6 +48,9 @@ const demoModules: Record<
   "bento-grid": dynamic(
     () => import("@/content/components/bento-grid/demo"),
   ),
+  "expandable-card": dynamic(
+    () => import("@/content/components/expandable-card/demo"),
+  ),
 }
 
 export function generateStaticParams() {
