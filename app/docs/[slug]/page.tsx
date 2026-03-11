@@ -45,6 +45,9 @@ const demoModules: Record<
   "flip-card": dynamic(
     () => import("@/content/components/flip-card/demo"),
   ),
+  "bento-grid": dynamic(
+    () => import("@/content/components/bento-grid/demo"),
+  ),
 }
 
 export function generateStaticParams() {

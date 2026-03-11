@@ -1,0 +1,8 @@
+{
+  "title": "Bento Grid",
+  "description": "Responsive bento-box layout with variable span cells.",
+  "category": "Cards",
+  "date": "2026-03-11",
+  "order": 15,
+  "registryDependencies": []
+}
