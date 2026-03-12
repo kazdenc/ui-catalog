@@ -1,0 +1,8 @@
+{
+  "title": "Copy Button",
+  "description": "A click-to-copy button with an animated clipboard-to-check icon transition and brief \"Copied!\" feedback.",
+  "category": "Actions",
+  "date": "2026-03-12",
+  "order": 10,
+  "registryDependencies": ["button"]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Marquee",
+  "description": "An infinite horizontal scroll of content with configurable speed and direction. Pauses on hover.",
+  "category": "Typography & Text",
+  "date": "2026-03-12",
+  "order": 10,
+  "registryDependencies": []
+}

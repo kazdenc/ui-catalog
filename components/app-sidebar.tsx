@@ -4,7 +4,7 @@ import * as React from "react"
 
 import { usePathname } from "next/navigation"
 import { ChevronRight, Github } from "lucide-react"
-import { SearchForm } from "@/components/search-form"
+import { CommandSearch } from "@/components/command-search"
 import {
   Collapsible,
   CollapsibleContent,
@@ -42,7 +42,7 @@ export function AppSidebar({
           </div>
           <span className="font-semibold text-sm">UI Catalog</span>
         </div>
-        <SearchForm />
+        <CommandSearch categories={categories} />
       </SidebarHeader>
       <SidebarContent>
         {categories.map((category) => {

@@ -87,6 +87,18 @@ const demoModules: Record<
   "avatar-group": dynamic(
     () => import("@/content/components/avatar-group/demo"),
   ),
+  "copy-button": dynamic(
+    () => import("@/content/components/copy-button/demo"),
+  ),
+  "text-gradient": dynamic(
+    () => import("@/content/components/text-gradient/demo"),
+  ),
+  "noise-texture": dynamic(
+    () => import("@/content/components/noise-texture/demo"),
+  ),
+  "marquee": dynamic(
+    () => import("@/content/components/marquee/demo"),
+  ),
 }
 
 export function generateStaticParams() {

@@ -1,0 +1,9 @@
+{
+  "title": "Noise Texture",
+  "description": "An SVG noise texture overlay with grain, static, and paper texture variants.",
+  "category": "Decorative & Background",
+  "date": "2026-03-12",
+  "order": 10,
+  "registryDependencies": [],
+  "controls": false
+}

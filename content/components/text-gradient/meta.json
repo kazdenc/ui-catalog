@@ -1,0 +1,8 @@
+{
+  "title": "Text Gradient",
+  "description": "Animated gradient text with configurable colors, direction, and a hover shimmer effect.",
+  "category": "Typography & Text",
+  "date": "2026-03-12",
+  "order": 10,
+  "registryDependencies": []
+}
