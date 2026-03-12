@@ -80,6 +80,7 @@ export function AppSidebar({
             >
               <SidebarGroup>
                 <CollapsibleTrigger
+                  nativeButton={false}
                   render={
                     <SidebarGroupLabel className="cursor-pointer select-none [&[data-panel-open]>svg]:rotate-90" />
                   }
