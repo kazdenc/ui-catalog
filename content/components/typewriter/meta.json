@@ -1,0 +1,8 @@
+{
+  "title": "Typewriter",
+  "description": "A character-by-character typing animation with a blinking cursor. Supports loop or one-shot modes.",
+  "category": "Typography & Text",
+  "date": "2026-03-12",
+  "order": 10,
+  "registryDependencies": []
+}

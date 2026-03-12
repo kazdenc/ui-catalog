@@ -1,0 +1,8 @@
+{
+  "title": "Avatar Group",
+  "description": "Stacked overlapping avatars with a +N overflow indicator and hover-to-expand animation.",
+  "category": "Data Display",
+  "date": "2026-03-12",
+  "order": 10,
+  "registryDependencies": ["tooltip"]
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Shimmer Button",
+  "description": "A button with a gradient shimmer sweep animation on hover, inspired by Apple's slide-to-unlock effect.",
+  "category": "Actions",
+  "date": "2026-03-12",
+  "order": 11,
+  "registryDependencies": ["button"]
+}

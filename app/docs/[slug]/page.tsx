@@ -78,6 +78,15 @@ const demoModules: Record<
   "command-palette": dynamic(
     () => import("@/content/components/command-palette/demo"),
   ),
+  "shimmer-button": dynamic(
+    () => import("@/content/components/shimmer-button/demo"),
+  ),
+  "typewriter": dynamic(
+    () => import("@/content/components/typewriter/demo"),
+  ),
+  "avatar-group": dynamic(
+    () => import("@/content/components/avatar-group/demo"),
+  ),
 }
 
 export function generateStaticParams() {
