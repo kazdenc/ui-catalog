@@ -92,7 +92,7 @@ const StepIndicator = React.forwardRef<HTMLDivElement, StepIndicatorProps>(
                       "transition-colors",
                       isHorizontal
                         ? "mx-1 h-0.5 flex-1"
-                        : "my-1 ml-[50%] h-8 w-0.5 -translate-x-1/2",
+                        : "my-1 h-8 w-0.5",
                       isCompleted ? "bg-primary" : "bg-muted",
                     )}
                   />

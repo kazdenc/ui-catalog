@@ -70,13 +70,13 @@ const AlertBanner = React.forwardRef<HTMLDivElement, AlertBannerProps>(
         ref={ref}
         role="alert"
         className={cn(
-          "flex items-start gap-3 rounded-lg border p-4",
+          "flex items-center gap-3 rounded-lg border p-4",
           config.className,
           className,
         )}
         {...props}
       >
-        <IconComponent className="mt-0.5 h-5 w-5 shrink-0" />
+        <IconComponent className="h-5 w-5 shrink-0" />
         <div className="flex-1 text-sm">{children}</div>
         {action && <div className="shrink-0">{action}</div>}
         {dismissible && (
