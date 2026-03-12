@@ -1,8 +1,8 @@
 {
   "title": "Expandable Card",
   "description": "Card that smoothly expands inline to reveal more content.",
-  "category": "Cards",
+  "category": "Surfaces",
   "date": "2026-03-11",
-  "order": 16,
+  "order": 26,
   "registryDependencies": []
 }

@@ -20,7 +20,7 @@ const GlassCard = React.forwardRef<HTMLDivElement, GlassCardProps>(
       <div
         ref={ref}
         className={cn(
-          "rounded-xl border border-white/20 bg-white/10 p-6 shadow-lg",
+          "rounded-xl border border-foreground/20 bg-foreground/10 p-6 shadow-lg",
           blurMap[blur],
           className,
         )}

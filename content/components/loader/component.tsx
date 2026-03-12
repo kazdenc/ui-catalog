@@ -76,7 +76,7 @@ const Loader = React.forwardRef<HTMLDivElement, LoaderProps>(
             <div
               className={cn(
                 s.dot,
-                "bg-indigo-500 animate-[loader-morph_2s_ease-in-out_infinite]",
+                "bg-primary animate-[loader-morph_2s_ease-in-out_infinite]",
               )}
             />
           )}
@@ -137,8 +137,8 @@ function LoaderStyles() {
   100% { transform: translateX(0.875em); opacity: 0.25; }
 }
 @keyframes loader-morph {
-  0%, 100% { border-radius: 15%; transform: rotate(0deg); background-color: #6366f1; }
-  50% { border-radius: 50%; transform: rotate(180deg); background-color: #ec4899; }
+  0%, 100% { border-radius: 15%; transform: rotate(0deg); background-color: var(--color-primary); }
+  50% { border-radius: 50%; transform: rotate(180deg); background-color: var(--color-accent); }
 }
 @keyframes loader-spin {
   to { transform: rotate(360deg); }

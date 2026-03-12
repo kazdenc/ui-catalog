@@ -1,8 +1,8 @@
 {
   "title": "Glass Card",
   "description": "A frosted glass morphism card with backdrop blur.",
-  "category": "Cards",
+  "category": "Surfaces",
   "date": "2026-03-10",
-  "order": 11,
+  "order": 20,
   "registryDependencies": []
 }

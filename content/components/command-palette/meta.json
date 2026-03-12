@@ -1,0 +1,9 @@
+{
+  "title": "Command Palette",
+  "description": "Spotlight-style search overlay with keyboard navigation.",
+  "category": "Navigation",
+  "date": "2026-03-11",
+  "order": 61,
+  "registryDependencies": [],
+  "controls": false
+}

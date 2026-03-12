@@ -164,12 +164,23 @@ export function getPageBySlug(slug: string): {
 
 // --- Navigation (combines pages + components) ---
 
+const CATEGORY_ORDER = [
+  "Getting Started",
+  "Actions",
+  "Surfaces",
+  "Layout",
+  "Feedback",
+  "Messaging",
+  "Navigation",
+]
+
 export function getNavCategories(activeSlug?: string): NavCategory[] {
-  const gettingStarted: NavCategory = { title: "Getting Started", items: [] }
-  const catalog: NavCategory = { title: "Catalog", items: [] }
+  const groups = new Map<string, NavCategory>()
 
   for (const page of getAllPages()) {
-    gettingStarted.items.push({
+    const cat = page.category || "Getting Started"
+    if (!groups.has(cat)) groups.set(cat, { title: cat, items: [] })
+    groups.get(cat)!.items.push({
       title: page.title,
       slug: page.slug,
       isActive: page.slug === activeSlug,
@@ -177,15 +188,21 @@ export function getNavCategories(activeSlug?: string): NavCategory[] {
   }
 
   for (const comp of getAllComponents()) {
-    catalog.items.push({
+    const cat = comp.category
+    if (!groups.has(cat)) groups.set(cat, { title: cat, items: [] })
+    groups.get(cat)!.items.push({
       title: comp.title,
       slug: comp.slug,
       isActive: comp.slug === activeSlug,
     })
   }
 
-  const categories: NavCategory[] = []
-  if (gettingStarted.items.length) categories.push(gettingStarted)
-  if (catalog.items.length) categories.push(catalog)
-  return categories
+  return CATEGORY_ORDER
+    .filter((cat) => groups.has(cat))
+    .map((cat) => groups.get(cat)!)
+    .concat(
+      [...groups.entries()]
+        .filter(([cat]) => !CATEGORY_ORDER.includes(cat))
+        .map(([, group]) => group)
+    )
 }

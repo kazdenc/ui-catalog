@@ -3,7 +3,7 @@
   "description": "Animated loading indicators with multiple variants — bouncing dots, pulse, ping-pong, and morphing.",
   "category": "Feedback",
   "date": "2026-03-10",
-  "order": 20,
+  "order": 40,
   "registryDependencies": [],
   "controls": true
 }

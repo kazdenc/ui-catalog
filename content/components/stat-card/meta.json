@@ -1,0 +1,9 @@
+{
+  "title": "Stat Card",
+  "description": "Metric display card with value, label, trend indicator, and optional icon.",
+  "category": "Surfaces",
+  "date": "2026-03-11",
+  "order": 24,
+  "registryDependencies": [],
+  "controls": false
+}

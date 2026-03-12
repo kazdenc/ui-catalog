@@ -1,8 +1,8 @@
 {
   "title": "Pricing Card",
   "description": "Pricing tier card with popular badge, feature list, and CTA.",
-  "category": "Cards",
+  "category": "Surfaces",
   "date": "2026-03-11",
-  "order": 17,
+  "order": 25,
   "registryDependencies": ["button"]
 }

@@ -69,6 +69,15 @@ const demoModules: Record<
   "step-indicator": dynamic(
     () => import("@/content/components/step-indicator/demo"),
   ),
+  "stat-card": dynamic(
+    () => import("@/content/components/stat-card/demo"),
+  ),
+  "submit-button": dynamic(
+    () => import("@/content/components/submit-button/demo"),
+  ),
+  "command-palette": dynamic(
+    () => import("@/content/components/command-palette/demo"),
+  ),
 }
 
 export function generateStaticParams() {

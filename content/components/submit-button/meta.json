@@ -1,0 +1,9 @@
+{
+  "title": "Submit Button",
+  "description": "Animated button with loading, success, and error state transitions.",
+  "category": "Actions",
+  "date": "2026-03-11",
+  "order": 11,
+  "registryDependencies": ["button"],
+  "controls": true
+}

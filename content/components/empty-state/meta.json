@@ -1,8 +1,8 @@
 {
   "title": "Empty State",
   "description": "Illustrated empty state with icon, title, description, and CTA.",
-  "category": "Feedback",
+  "category": "Messaging",
   "date": "2026-03-11",
-  "order": 24,
+  "order": 51,
   "registryDependencies": ["button"]
 }
